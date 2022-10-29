@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Proyecto Progra I">
+  <ClassDiagramComponents>
+    <Class name="PhysicalPerson" package="" visibility="public" xPosition="422.0" yPosition="208.0">
+      <Fields>
+        <Field name="cellphone" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Bussiness" package="" visibility="public" xPosition="36.0" yPosition="189.0">
+      <Fields>
+        <Field name="CFI" type="String" visibility="private"/>
+        <Field name="phoneNumber" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Requests" package="" visibility="public" xPosition="279.0" yPosition="769.0">
+      <Fields>
+        <Field name="date" type="Date" visibility="private"/>
+        <Field name="time" type="String" visibility="private"/>
+        <Field name="tons" type="double" visibility="private"/>
+        <Field name="applicantNumber" type="int" visibility="private"/>
+        <Field name="state" type="String" visibility="private"/>
+        <Field name="vehicle" type="Vehicle" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Access" package="" visibility="public" xPosition="367.0" yPosition="1077.0">
+      <Fields>
+        <Field name="accessDate" type="Date" visibility="private"/>
+        <Field name="accessHour" type="String" visibility="private"/>
+        <Field name="choferName" type="String" visibility="private"/>
+        <Field name="exitDate" type="Date" visibility="private"/>
+        <Field name="exitHour" type="String" visibility="private"/>
+        <Field name="tons" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Terrain" package="" visibility="public" xPosition="838.0" yPosition="956.0">
+      <Fields>
+        <Field name="blocks" type="int" visibility="private"/>
+        <Field name="terrainLimit" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Explotions" package="" visibility="public" xPosition="580.0" yPosition="956.0">
+      <Fields>
+        <Field name="explotionLimit" type="int" visibility="private"/>
+        <Field name="tonsAccumulator" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Billing" package="" visibility="public" xPosition="20.0" yPosition="769.0">
+      <Fields>
+        <Field name="bill" type="int" visibility="private"/>
+        <Field name="priceTon" type="int" visibility="private"/>
+        <Field name="finalBill" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Applicant" package="" visibility="public" xPosition="231.0" yPosition="516.0">
+      <Fields>
+        <Field name="applicantID" type="int" visibility="private"/>
+        <Field name="username" type="String" visibility="private"/>
+        <Field name="password" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Main" package="" visibility="public" xPosition="20.0" yPosition="1354.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Vehicle" package="" visibility="public" xPosition="513.0" yPosition="635.0">
+      <Fields>
+        <Field name="carID" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Driver" package="" visibility="public" xPosition="708.0" yPosition="473.0">
+      <Fields>
+        <Field name="driversLicence" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Person" package="" visibility="public" xPosition="680.0" yPosition="68.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="adress" type="String" visibility="private"/>
+        <Field name="ID" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Product" package="" visibility="public" xPosition="708.0" yPosition="769.0">
+      <Fields>
+        <Field name="productID" type="String" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="price" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Interface name="PhysicalPersonInterface" package="" visibility="public" xPosition="422.0" yPosition="401.0">
+      <Methods/>
+    </Interface>
+    <Interface name="BussinessInterface" package="" visibility="public" xPosition="36.0" yPosition="401.0">
+      <Methods/>
+    </Interface>
+    <Enum name="BillingMethods" package="" visibility="public" xPosition="20.0" yPosition="977.0">
+      <Literals>
+        <Literal name="CASH"/>
+        <Literal name="SINPE"/>
+        <Literal name="CARD"/>
+        <Literal name="CREDIT"/>
+        <Literal name="CRYPTO COIN"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="has" source="Terrain" target="Explotions" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="use" source="Billing" target="BillingMethods" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="has" source="Applicant" target="Billing" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <IsRelation name="is" source="PhysicalPerson" target="Person"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Bussiness" target="BussinessInterface"/>
+    <HasRelation name="Has" source="Requests" target="Access" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Has" source="Vehicle" target="Driver" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Has" source="Applicant" target="Vehicle" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="Has" source="Requests" target="Vehicle" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="Solicita" source="Applicant" target="Requests" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="List"/>
+    <HasRelation name="Request = Explotion" source="Requests" target="Explotions" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="use" source="Main" target="Requests" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="Has" source="Billing" target="Requests" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Driver" target="Person"/>
+    <HasRelation name="has" source="Requests" target="Product" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Applicant" target="BussinessInterface"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="PhysicalPerson" target="PhysicalPersonInterface"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Applicant" target="PhysicalPersonInterface"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

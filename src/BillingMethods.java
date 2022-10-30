@@ -1,4 +1,4 @@
 public enum BillingMethods {
 
-    CASH, SINPE, CARD, CREDIT, CRYPTO COIN
+    CASH,SINPE,CARD,CREDIT,CRYPTOCOIN;
 }

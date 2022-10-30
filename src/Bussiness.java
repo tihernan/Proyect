@@ -41,7 +41,7 @@ public class Bussiness implements BussinessInterface {
 
     @Override
     public String toString() {
-        return "Bussiness{" + "CFI=" + CFI + ", phoneNumber=" + phoneNumber + '}';
+        return super.toString() + "Bussiness{" + "CFI=" + CFI + ", phoneNumber=" + phoneNumber + '}';
     }
 
 }

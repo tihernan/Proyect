@@ -1,8 +1,8 @@
 public class Applicant implements BussinessInterface, PhysicalPersonInterface {
 
     private int applicantID;
-    private String username;
-    private String password;
+    String username;
+    String password;
     
     public Applicant() {
     }

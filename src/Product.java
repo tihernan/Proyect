@@ -3,6 +3,7 @@ public class Product {
     private String productID;
     private String name;
     private double price;
+    double productInventary;
 
     public Product() {
     }
@@ -11,6 +12,10 @@ public class Product {
         this.productID = productID;
         this.name = name;
         this.price = price;
+    }
+
+    Product(String string, String arena, double d, int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**

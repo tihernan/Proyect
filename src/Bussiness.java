@@ -11,6 +11,11 @@ public class Bussiness implements BussinessInterface {
         this.phoneNumber = phoneNumber;
     }
 
+    Bussiness(String string, String string0, String florida_SA) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
     /**
      * @return the CFI
      */

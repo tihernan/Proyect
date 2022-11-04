@@ -1,3 +1,5 @@
+package cantera;
+
 public class Applicant implements BussinessInterface, PhysicalPersonInterface {
 
     private int applicantID;

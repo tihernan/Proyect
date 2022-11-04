@@ -1,3 +1,5 @@
+package cantera;
+
 public class Bussiness implements BussinessInterface {
 
     private String CFI;

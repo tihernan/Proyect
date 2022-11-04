@@ -1,3 +1,5 @@
+package cantera;
+
 public class Person {
 
     private String name;

@@ -1,3 +1,5 @@
+package cantera;
+
 public class Explotions {
 
     private int explotionLimit;

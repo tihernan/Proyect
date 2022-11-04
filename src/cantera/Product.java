@@ -1,3 +1,5 @@
+package cantera;
+
 public class Product {
 
     private String productID;

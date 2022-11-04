@@ -1,3 +1,5 @@
+package cantera;
+
 public class Terrain {
 
     private int blocks;

@@ -1,5 +1,10 @@
-import java.util.Date;
+package cantera;
 
+import java.util.Date;
+/**
+ * Esta es la descricion 
+ * @author pablonoguera
+ */
 public class Access {
 
     private Date accessDate;

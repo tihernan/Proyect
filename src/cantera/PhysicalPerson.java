@@ -1,3 +1,5 @@
+package cantera;
+
 public class PhysicalPerson extends Person implements PhysicalPersonInterface {
 
     private String cellphone;

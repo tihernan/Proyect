@@ -1,3 +1,5 @@
+package cantera;
+
 public class Billing {
 
     private int bill;

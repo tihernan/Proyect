@@ -46,6 +46,11 @@ public class Terrain {
     
     public static void mostrarCuadrantes(){
         int cuadrante[][]= new int[2][2];
+        cuadrante[0][0]=2;
+        cuadrante[0][1]=2;
+        cuadrante[1][0]=2;
+        cuadrante[1][1]=2;
+        
         for (int i = 0; i < cuadrante.length; i++) {
             System.out.println("______________");
             for (int j = 0; j < cuadrante[i].length; j++) {

@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
+
 
 public class Main {
 
@@ -206,8 +206,8 @@ public class Main {
                                                     inventario[0].productInventary = inventario[0].productInventary + 100;
                                                     inventario[1].productInventary = inventario[1].productInventary + 100;
                                                     inventario[2].productInventary = inventario[2].productInventary + 100;
-
-                                                    JOptionPane.showMessageDialog(null, "Explosion realizada correctamente");
+                                                    JOptionPane.showMessageDialog(null, "Explosion realizada correctamente"
+                                                            + "Inventario actualizado");
                                                     break;
 
                                                 case 2:

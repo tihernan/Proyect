@@ -1,14 +1,16 @@
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Requests {
 
     private Date date;
     private String time;
-    private double tons;
+    double tons;
     private int applicantNumber;
     private String state;
     private Vehicle vehicle;
+    private Iterable<Object> product;
 
     public Requests() {
     }
@@ -20,6 +22,10 @@ public class Requests {
         this.applicantNumber = applicantNumber;
         this.state = state;
         this.vehicle = vehicle;
+    }
+
+    Requests(ArrayList productosSolic) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -111,9 +117,4 @@ public class Requests {
         return "Requests{" + "date=" + date + ", time=" + time + ", tons=" + tons + ", applicantNumber=" + applicantNumber + ", state=" + state + ", vehicle=" + vehicle + '}';
     }
     
-    public void tramitarSolicitud(){
-        for (Object producto : this.product) {
-            Explotions.extraerMaterial((Product) producto);
-        }
-    }
 }

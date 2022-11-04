@@ -8,14 +8,11 @@ public class Product {
     public Product() {
     }
 
-    public Product(String productID, String name, double price) {
+    public Product(String productID, String name, double price, double productInventary) {
         this.productID = productID;
         this.name = name;
         this.price = price;
-    }
-
-    Product(String string, String arena, double d, int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.productInventary = productInventary;
     }
 
     /**
@@ -60,9 +57,22 @@ public class Product {
         this.price = price;
     }
 
+    /**
+     * @return the productInventary
+     */
+    public double getProductInventary() {
+        return productInventary;
+    }
+
+    /**
+     * @param productInventary the productInventary to set
+     */
+    public void setProductInventary(double productInventary) {
+        this.productInventary = productInventary;
+    }
+
     @Override
     public String toString() {
-        return "Product{" + "productID=" + productID + ", name=" + name + ", price=" + price + '}';
+        return "Product{" + "productID=" + productID + ", name=" + name + ", price=" + price + ", productInventary=" + productInventary + '}';
     }
-    
 }

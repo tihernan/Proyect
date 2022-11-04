@@ -111,4 +111,9 @@ public class Requests {
         return "Requests{" + "date=" + date + ", time=" + time + ", tons=" + tons + ", applicantNumber=" + applicantNumber + ", state=" + state + ", vehicle=" + vehicle + '}';
     }
     
+    public void tramitarSolicitud(){
+        for (Object producto : this.product) {
+            Explotions.extraerMaterial((Product) producto);
+        }
+    }
 }

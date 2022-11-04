@@ -54,7 +54,7 @@ public class Terrain {
         for (int i = 0; i < cuadrante.length; i++) {
             System.out.println("______________");
             for (int j = 0; j < cuadrante[i].length; j++) {
-                System.out.print(cuadrante[i][j]+" | ");
+                System.out.print("|  "+cuadrante[i][j]+" |   ");
             }
             System.out.println("");
         }
